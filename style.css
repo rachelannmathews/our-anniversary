@@ -1,0 +1,190 @@
+:root {
+  --bg: #d3cac1;
+  --ink: #2b2725;
+  --serif: 'Playfair Display', serif;
+  --script: 'Caveat', cursive;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage {
+  position: relative;
+  width: min(100vw, 524px);
+  height: min(100vh, calc(100vw * 700 / 524));
+  aspect-ratio: 524 / 700;
+  max-height: 100vh;
+  max-width: calc(100vh * 524 / 700);
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+  display: none;
+  background: var(--bg);
+}
+
+.screen.active {
+  display: block;
+}
+
+/* ---------- SCREEN 1 ---------- */
+
+.screen1-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.star-hotspot {
+  position: absolute;
+  top: 44%;
+  left: 73.8%;
+  width: 14%;
+  aspect-ratio: 1;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.star-hit:hover { transform: translate(-50%, -50%) scale(1.08); }
+.star-hit:active { transform: translate(-50%, -50%) scale(0.95); }
+
+/* ---------- SCREENS 2-7 (vinyl) ---------- */
+
+.label-hit {
+  position: absolute;
+  top: 8%;
+  left: 0;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 8px 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.label {
+  display: block;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(15px, 3vw, 19px);
+  letter-spacing: 1.5px;
+  color: var(--ink);
+}
+
+.vinyl-hit {
+  position: absolute;
+  top: 16%;
+  left: 10%;
+  width: 80%;
+  aspect-ratio: 1;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.vinyl-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: 50% 50%;
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,0.18));
+}
+
+.vinyl-img.spinning {
+  animation: spin 2.6s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.caption {
+  position: absolute;
+  top: 76.5%;
+  left: 8%;
+  width: 84%;
+  text-align: center;
+  font-family: var(--script);
+  font-size: clamp(17px, 4vw, 21px);
+  line-height: 1.3;
+}
+
+.heart-hit {
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  width: 15%;
+  aspect-ratio: 1;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+.heart-hit img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));
+}
+
+.heart-hit:hover { transform: translate(-50%, -50%) scale(1.08); }
+.heart-hit:active { transform: translate(-50%, -50%) scale(0.95); }
+
+/* ---------- SCREEN 8 ---------- */
+
+.screen8-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.final-heart-hotspot {
+  position: absolute;
+  top: 72.9%;
+  left: 50.1%;
+  width: 21%;
+  aspect-ratio: 1;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .vinyl-img.spinning { animation: none; }
+}

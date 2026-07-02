@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>soul mates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stage">
+
+  <!-- SCREEN 1 -->
+  <section class="screen" id="screen-1" data-index="0">
+    <img class="screen1-bg" src="assets/screen1.png" alt="soul mates">
+    <button class="star-hotspot" id="star-btn" aria-label="Next"></button>
+  </section>
+
+  <!-- SCREEN 2 -->
+  <section class="screen vinyl-screen" id="screen-2" data-index="1">
+    <button class="label-hit" data-prev="1"><span class="label">one</span></button>
+    <button class="vinyl-hit" data-audio="audio-2">
+      <img class="vinyl-img" src="assets/vinyl_one.png" alt="">
+    </button>
+    <div class="caption">you said i reminded you of ylang ylang, fkj</div>
+    <button class="heart-hit" data-next="3" aria-label="Next">
+      <img src="assets/heart_wax.png" alt="">
+    </button>
+    <audio id="audio-2" preload="none" src="audio/02-ylang-ylang.mp3" data-start="48"></audio>
+  </section>
+
+  <!-- SCREEN 3 -->
+  <section class="screen vinyl-screen" id="screen-3" data-index="2">
+    <button class="label-hit" data-prev="2"><span class="label">two</span></button>
+    <button class="vinyl-hit" data-audio="audio-3">
+      <img class="vinyl-img" src="assets/vinyl_two.png" alt="">
+    </button>
+    <div class="caption">getting to know you: rüfüs, xxxtentacion etc</div>
+    <button class="heart-hit" data-next="4" aria-label="Next">
+      <img src="assets/heart_wax.png" alt="">
+    </button>
+    <audio id="audio-3" preload="none" src="audio/03-someone-who-loves-you.mp3" data-start="0"></audio>
+  </section>
+
+  <!-- SCREEN 4 -->
+  <section class="screen vinyl-screen" id="screen-4" data-index="3">
+    <button class="label-hit" data-prev="3"><span class="label">three</span></button>
+    <button class="vinyl-hit" data-audio="audio-4">
+      <img class="vinyl-img" src="assets/vinyl_three.png" alt="">
+    </button>
+    <div class="caption">our first tomorrowland - cdw</div>
+    <button class="heart-hit" data-next="5" aria-label="Next">
+      <img src="assets/heart_wax.png" alt="">
+    </button>
+    <audio id="audio-4" preload="none" src="audio/04-age-of-love.mp3" data-start="85"></audio>
+  </section>
+
+  <!-- SCREEN 5 -->
+  <section class="screen vinyl-screen" id="screen-5" data-index="4">
+    <button class="label-hit" data-prev="4"><span class="label">four</span></button>
+    <button class="vinyl-hit" data-audio="audio-5">
+      <img class="vinyl-img" src="assets/vinyl_four.png" alt="">
+    </button>
+    <div class="caption">the year of unreal - klang</div>
+    <button class="heart-hit" data-next="6" aria-label="Next">
+      <img src="assets/heart_wax.png" alt="">
+    </button>
+    <audio id="audio-5" preload="none" src="audio/05-toter-schmetterling.mp3" data-start="48"></audio>
+  </section>
+
+  <!-- SCREEN 6 -->
+  <section class="screen vinyl-screen" id="screen-6" data-index="5">
+    <button class="label-hit" data-prev="5"><span class="label">five</span></button>
+    <button class="vinyl-hit" data-audio="audio-6">
+      <img class="vinyl-img" src="assets/vinyl_five.png" alt="">
+    </button>
+    <div class="caption">bkk, fred again n agan n agaaaaaaain</div>
+    <button class="heart-hit" data-next="7" aria-label="Next">
+      <img src="assets/heart_wax.png" alt="">
+    </button>
+    <audio id="audio-6" preload="none" src="audio/06-i-found-you.mp3" data-start="54"></audio>
+  </section>
+
+  <!-- SCREEN 7 -->
+  <section class="screen vinyl-screen" id="screen-7" data-index="6">
+    <button class="label-hit" data-prev="6"><span class="label">six</span></button>
+    <button class="vinyl-hit" data-audio="audio-7">
+      <img class="vinyl-img" src="assets/vinyl_six.png" alt="">
+    </button>
+    <div class="caption">afc, bieberchelly!!!!!!</div>
+    <button class="heart-hit" data-next="8" aria-label="Next">
+      <img src="assets/heart_wax.png" alt="">
+    </button>
+    <audio id="audio-7" preload="none" src="audio/07-yukon.mp3" data-start="36"></audio>
+  </section>
+
+  <!-- SCREEN 8 -->
+  <section class="screen" id="screen-8" data-index="7">
+    <img class="screen8-bg" src="assets/screen8.png" alt="happy anniversary note">
+    <button class="final-heart-hotspot" data-prev="7" aria-label="Back"></button>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
